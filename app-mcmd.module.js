@@ -1,0 +1,1 @@
+var mcmdApp = angular.module('mcmdApp',[]);
