@@ -1,1 +1,1 @@
-var mcmdApp = angular.module('mcmdApp',[]);
+var mcmdApp = angular.module('mcmdApp',['ui.bootstrap','ngAnimate']);
