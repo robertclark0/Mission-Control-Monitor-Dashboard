@@ -6,6 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css" />
         <!--Application-->
         <script src="app-mcmd.module.js"></script>
         <script src="app-mcmd.config.js"></script>
@@ -21,14 +22,14 @@
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <div id="header-img">
-                    <img src="media/mcmd-logo-background.JPG" alt="MCMD-logo"/>
+                    <img src="media/mcmd-logo-gray.jpg" alt="MCMD-logo"/>
                 </div>
                 <div id="monitor-list" ng-controller="navController">
-                    <ul class="sidebar-nav">
-                        <li ng-repeat="monitor in monitorList">
-                            <a href="#">{{monitor.title}}</a>
-                        </li>
-                    </ul>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item" ng-repeat="monitor in monitorList">
+                            {{monitor.title}}
+                        </a>
+                    </div>
                 </div>
             </div>
             <!-- Page Content -->

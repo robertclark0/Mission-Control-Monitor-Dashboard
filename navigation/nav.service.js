@@ -17,6 +17,12 @@ mcmdApp.service('navService', function(){
             type: "Weather",
             lon: "80",
             lat: "29"
+        },
+        {
+            title: "Air Traffic",
+            type: "Traffic",
+            lon: "25",
+            lat: "24"
         }
     ];
 });
