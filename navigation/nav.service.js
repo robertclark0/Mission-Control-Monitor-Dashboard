@@ -1,5 +1,5 @@
 mcmdApp.service('navService', function(){
-    this.navList = [
+    this.monitorList = [
         {
             title: "LP40 Weather",
             type: "Weather",

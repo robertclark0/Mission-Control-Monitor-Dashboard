@@ -23,19 +23,10 @@
                 <div id="header-img">
                     <img src="media/mcmd-logo-background.JPG" alt="MCMD-logo"/>
                 </div>
-                <div>
+                <div id="monitor-list" ng-controller="navController">
                     <ul class="sidebar-nav">
-                        <li>
-                            <a href="#">Monitor 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Monitor 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Monitor 3</a>
-                        </li>
-                        <li>
-                            <a href="#">Monitor 3</a>
+                        <li ng-repeat="monitor in monitorList">
+                            <a href="#">{{monitor.title}}</a>
                         </li>
                     </ul>
                 </div>
