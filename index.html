@@ -30,23 +30,23 @@
                 <div id="header-img">
                     <img src="media/mcmd-logo-gray.jpg" alt="MCMD-logo"/>
                 </div>
-                <div id="monitor-list" ng-controller="navController">
+                <div id="monitor-list" ng-controller="NavController">
                     <div class="list-group">
                         <a href="#" class="list-group-item" ng-repeat="monitor in monitorList">
                             {{monitor.title}}
                         </a>
                     </div>
                 </div>
-                <div id="monitor-list-settings" class="button-group " role="group" ng-controller="controller1">
+                <div id="monitor-list-settings" class="button-group " role="group" ng-controller="MonitorsController">
 
-                    <button type="button" class="btn btn-primary" ng-click="open()">Monitors</button>
+                    <button type="button" class="btn btn-primary" ng-click="open('lg')">Monitors</button>
                     <button type="button" class="btn btn-primary">Loop</button>
                 </div>
             </div>
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div class="container-fluid">
-                    <div ng-view></div>
+
                 </div>
             </div>
             <!-- /#page-content-wrapper -->

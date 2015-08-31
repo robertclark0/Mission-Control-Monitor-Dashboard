@@ -1,4 +1,4 @@
-mcmdApp.controller('controller1', ['$scope', '$modal',function($scope, $modal){
+mcmdApp.controller('MonitorsController', ['$scope', '$modal',function($scope, $modal){
 
     $scope.items = ['item1', 'item2', 'item3'];
 
@@ -9,8 +9,8 @@ mcmdApp.controller('controller1', ['$scope', '$modal',function($scope, $modal){
         var modalInstance = $modal.open({
             animation: $scope.animationsEnabled,
             templateUrl: 'monitors/modal.template.html',
-            controller: 'ModalInstanceCtrl',
-            size: 'lg',
+            controller: 'ModalController',
+            size: size,
             resolve: {
                 items: function () {
                     return $scope.items;

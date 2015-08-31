@@ -1,14 +1,14 @@
-mcmdApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items, navService) {
+mcmdApp.controller('ModalController', function ($scope, $modalInstance, items, navService) {
 
-    $scope.monitorList2 = navService.monitorList;
+    $scope.monitorList = navService.monitorList;
 
     $scope.newMonitorName = '';
 
     $scope.addMonitor = function(){
-        $scope.monitorList2.push({
+        $scope.monitorList.push({
             title: $scope.newMonitorName
-        })
-        navService.monitorList = $scope.monitorList2;
+        });
+        navService.monitorList = $scope.monitorList;
     };
 
     $scope.ok = function () {
