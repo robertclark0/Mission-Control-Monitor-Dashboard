@@ -5,5 +5,8 @@ mcmdApp.config(function($routeProvider) {
         .when('/', {
             templateUrl: 'dashboard-views/default.template.html'
         })
+        .otherwise({
+            redirectTo: '/'
+        });
 
 });

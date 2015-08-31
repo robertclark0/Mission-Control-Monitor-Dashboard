@@ -46,11 +46,11 @@
                     <small><a href="http://robertclark.io">RobertClark.io</a> </small>
                 </div>
                 <div id="monitor-list" ng-controller="NavController">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item" ng-repeat="monitor in monitorList track by $index">
-                            {{monitor.title}}
-                        </a>
-                    </div>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation" ng-repeat="monitor in monitorList track by $index">
+                            <a href="#">{{monitor.title}}</a>
+                        </li>
+                    </ul>
                 </div>
                 <div id="monitor-list-settings" class="button-group " role="group" ng-controller="MonitorsController">
 
