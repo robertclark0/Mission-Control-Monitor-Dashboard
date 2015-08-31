@@ -27,6 +27,8 @@
         <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
         <!--<link rel="stylesheet" href="monitors/ui-grid/ui-grid.css" type="text/css"/>-->
         <link rel="stylesheet" href="monitors/ui-grid/ui-grid.custom.css" />
+        <!--App Level Custom CSS-->
+        <link rel="stylesheet" href="app.custom.css"/>
 
 
     </head>
@@ -36,6 +38,11 @@
             <div id="sidebar-wrapper">
                 <div id="header-img">
                     <img src="media/mcmd-logo-gray.jpg" alt="MCMD-logo"/>
+                </div>
+                <div class="well well-lg">
+                    <small>Version 1.0</small><br>
+                    <small>Last Updated 08:31:2015</small><br>
+                    <small><a href="http://robertclark.io">RobertClark.io</a> </small>
                 </div>
                 <div id="monitor-list" ng-controller="NavController">
                     <div class="list-group">
@@ -53,7 +60,7 @@
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div class="container-fluid">
-
+                    <div ng-view></div>
                 </div>
             </div>
             <!-- /#page-content-wrapper -->
