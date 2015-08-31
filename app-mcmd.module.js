@@ -1,1 +1,1 @@
-var mcmdApp = angular.module('mcmdApp',['ui.bootstrap','ngAnimate']);
+var mcmdApp = angular.module('mcmdApp',['ui.bootstrap','ngAnimate','ui.grid', 'ui.grid.selection']);

@@ -25,11 +25,7 @@
             </accordion>
         </div>
         <div class="col-md-6">
-            <ul>
-                <li ng-repeat="monitor in monitorList">
-                    {{monitor.title}}
-                </li>
-            </ul>
+            <div ui-grid="gridOptions" ui-grid-selection class="grid"></div>
             <label>Add Monitor</label>
             <input type="text" ng-model="newMonitorName" />
             <button type="button" class="btn btn-primary" ng-click="addMonitor()">Add</button>
