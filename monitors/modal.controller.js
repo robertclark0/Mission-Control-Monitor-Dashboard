@@ -1,35 +1,48 @@
-mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'monitorsService','uiGridConstants', function ($scope, $modalInstance, monitorsService, uiGridConstants) {
+mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'currentMonitorsService','uiGridConstants', 'availableMonitorsService', function ($scope, $modalInstance, currentMonitorsService, uiGridConstants, availableMonitorsService) {
 
-    $scope.monitorList = monitorsService.monitorList;
+    $scope.currentMonitorList = currentMonitorsService.monitorList;
+    $scope.availableMonitorList = availableMonitorsService.monitorList;
 
     $scope.newMonitorName = '';
 
     $scope.addMonitor = function(){
-        $scope.monitorList.push({
+        $scope.currentMonitorList.push({
             title: $scope.newMonitorName
         });
-        //monitorsService.monitorList = $scope.monitorList;
+        //currentMonitorsService.monitorList = $scope.currentMonitorList;
     };
 
-    //GRID
-    $scope.gridOptions = {
+    //Available Monitors Grid
+    $scope.gridAvailableMonitors = {
         enableRowSelection: true,
         enableSelectAll: true,
         selectionRowHeaderWidth: 35,
         rowHeight: 35,
         enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
-        enableColumnMenus: false
+        enableColumnMenus: false,
+        multiSelect: true,
+        columnDefs: [
+            { name: 'title', displayName: 'Available Monitors', enableSorting: false}
+        ],
+        data: $scope.availableMonitorList
     };
 
-    $scope.gridOptions.columnDefs = [
-        { name: 'title', displayName: 'Current Monitors'}
-    ];
+    //Current Monitors Grid
+    $scope.gridCurrentMonitors = {
+        enableRowSelection: true,
+        enableSelectAll: true,
+        selectionRowHeaderWidth: 35,
+        rowHeight: 35,
+        enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
+        enableColumnMenus: false,
+        multiSelect: true,
+        data: $scope.currentMonitorList,
+        columnDefs: [
+        { name: 'title', displayName: 'Current Monitors', enableSorting: false}
+    ]};
 
-    $scope.gridOptions.multiSelect = true;
 
-    $scope.gridOptions.data = $scope.monitorList;
-
-    //BOTTOM BUTTONS
+    //Bottom Buttons
 
     $scope.ok = function () {
         $modalInstance.close();

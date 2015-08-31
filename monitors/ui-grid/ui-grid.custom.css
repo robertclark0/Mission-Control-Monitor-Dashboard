@@ -966,6 +966,9 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
 .ui-grid-row .ui-grid-cell.ui-grid-row-header-cell {
     border-bottom: none !important;
 }
+.ui-grid-selection-row-header-buttons {
+    opacity: 1 !important;
+}
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------

@@ -4,31 +4,14 @@
 <div class="modal-body">
     <div class="row">
         <div class="col-md-6">
-            <accordion>
-                <accordion-group heading="Weather Monitors">
-                    <div class="list-group">
-                        <button type="button" class="list-group-item">Custom Weather</button>
-                    </div>
-                </accordion-group>
-                <accordion-group heading="Mission Monitors">
-                    <div class="list-group">
-                        <button type="button" class="list-group-item">Cassini</button>
-                        <button type="button" class="list-group-item">Helioviewer</button>
-                        <button type="button" class="list-group-item">MAAS - Mars Atmospheric Agrregation System</button>
-                    </div>
-                </accordion-group>
-                <accordion-group heading="Air Traffic Monitor">
-                    <div class="list-group">
-                        <button type="button" class="list-group-item">Custom Air Traffic</button>
-                    </div>
-                </accordion-group>
-            </accordion>
-        </div>
-        <div class="col-md-6">
-            <div ui-grid="gridOptions" ui-grid-selection class="grid"></div>
-            <label>Add Monitor</label>
+            <div id="gridAvailableMonitors" ui-grid="gridAvailableMonitors" ui-grid-selection class="grid"></div>
             <input type="text" ng-model="newMonitorName" />
             <button type="button" class="btn btn-primary" ng-click="addMonitor()">Add</button>
+        </div>
+        <div class="col-md-6">
+            <div id="gridCurrentMonitors" ui-grid="gridCurrentMonitors" ui-grid-selection class="grid"></div>
+            <label>Add Monitor</label>
+
         </div>
     </div>
 
