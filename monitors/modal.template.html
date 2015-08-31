@@ -6,12 +6,12 @@
         <div class="col-md-6">
             <div id="gridAvailableMonitors" ui-grid="gridAvailableMonitors" ui-grid-selection class="grid"></div>
 
-            <form ng-submit="addMonitor()">
+            <form ng-submit="addMonitor()" ng-show="addButtonState">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <button class="btn btn-success" type="submit">Add</button>
+                      <button class="btn btn-success" type="submit" >Add</button>
                     </span>
-                    <input type="text" class="form-control" ng-model="newMonitorName">
+                    <input type="text" class="form-control" ng-model="newMonitorName" required>
                 </div>
             </form>
 
@@ -20,7 +20,7 @@
         <div class="col-md-6">
             <div id="gridCurrentMonitors" ui-grid="gridCurrentMonitors" ui-grid-selection class="grid"></div>
 
-            <button type="submit" class="btn btn-danger" ng-click="removeMonitors()">Remove</button>
+            <button type="button" class="btn btn-danger" ng-click="removeMonitors()">Remove</button>
 
         </div>
     </div>

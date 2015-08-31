@@ -2,6 +2,7 @@ mcmdApp.controller('ModalController', ['$scope', '$filter', '$modalInstance', 'c
 
     $scope.currentMonitorList = currentMonitorsService.monitorList;
     $scope.availableMonitorList = availableMonitorsService.monitorList;
+    $scope.addButtonState = false;
 
 
 
@@ -43,8 +44,11 @@ mcmdApp.controller('ModalController', ['$scope', '$filter', '$modalInstance', 'c
         $scope.gridApi = gridApi;
         gridApi.selection.on.rowSelectionChanged($scope,function(row){
             if (row.isSelected === true){
+                $scope.addButtonState = true;
                 $scope.newMonitorObject = angular.copy(gridApi.selection.getSelectedRows()[0]);
                 $scope.newMonitorName = $scope.newMonitorObject.title;
+            } else if (row.isSelected === false){
+                $scope.addButtonState = false;
             }
         })
     };
