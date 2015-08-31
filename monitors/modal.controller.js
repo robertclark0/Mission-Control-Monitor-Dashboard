@@ -20,10 +20,10 @@ mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'currentMonit
         enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
         enableColumnMenus: false,
         multiSelect: false,
+        data: $scope.availableMonitorList,
         columnDefs: [
             { name: 'title', displayName: 'Available Monitors', enableSorting: false}
-        ],
-        data: $scope.availableMonitorList
+        ]
     };
     $scope.gridAvailableMonitors.onRegisterApi = function(gridApi){
         //set gridApi on scope
