@@ -2,14 +2,40 @@
     <h3 class="modal-title">Monitors</h3>
 </div>
 <div class="modal-body">
-    <ul>
-        <li ng-repeat="monitor in monitorList">
-            {{monitor.title}}
-        </li>
-    </ul>
-    <label>Add Monitor</label>
-    <input type="text" ng-model="newMonitorName" />
-    <button type="button" class="btn btn-primary" ng-click="addMonitor()">Add</button>
+    <div class="row">
+        <div class="col-md-6">
+            <accordion>
+                <accordion-group heading="Weather Monitors">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item">Custom Weather</button>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Mission Monitors">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item">Cassini</button>
+                        <button type="button" class="list-group-item">Helioviewer</button>
+                        <button type="button" class="list-group-item">MAAS - Mars Atmospheric Agrregation System</button>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Air Traffic Monitor">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item">Custom Air Traffic</button>
+                    </div>
+                </accordion-group>
+            </accordion>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <li ng-repeat="monitor in monitorList">
+                    {{monitor.title}}
+                </li>
+            </ul>
+            <label>Add Monitor</label>
+            <input type="text" ng-model="newMonitorName" />
+            <button type="button" class="btn btn-primary" ng-click="addMonitor()">Add</button>
+        </div>
+    </div>
+
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
