@@ -1,6 +1,6 @@
-mcmdApp.controller('ModalController', function ($scope, $modalInstance, items, navService) {
+mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'monitorsService', function ($scope, $modalInstance, monitorsService) {
 
-    $scope.monitorList = navService.monitorList;
+    $scope.monitorList = monitorsService.monitorList;
 
     $scope.newMonitorName = '';
 
@@ -8,7 +8,7 @@ mcmdApp.controller('ModalController', function ($scope, $modalInstance, items, n
         $scope.monitorList.push({
             title: $scope.newMonitorName
         });
-        navService.monitorList = $scope.monitorList;
+        //monitorsService.monitorList = $scope.monitorList;
     };
 
     $scope.ok = function () {
@@ -18,4 +18,4 @@ mcmdApp.controller('ModalController', function ($scope, $modalInstance, items, n
     $scope.cancel = function () {
         $modalInstance.dismiss('cancel');
     };
-});
+}]);

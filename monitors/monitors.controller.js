@@ -1,7 +1,5 @@
 mcmdApp.controller('MonitorsController', ['$scope', '$modal',function($scope, $modal){
 
-    $scope.items = ['item1', 'item2', 'item3'];
-
     $scope.animationsEnabled = true;
 
     $scope.open = function (size) {

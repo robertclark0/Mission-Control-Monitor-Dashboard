@@ -1,4 +1,4 @@
-mcmdApp.service('navService', function(){
+mcmdApp.service('monitorsService', function(){
     this.monitorList = [
         {
             title: "LP40 Weather",

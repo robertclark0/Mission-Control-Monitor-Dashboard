@@ -1,3 +1,3 @@
-mcmdApp.controller('NavController',['$scope', 'navService',function($scope, navservice){
-    $scope.monitorList = navservice.monitorList;
+mcmdApp.controller('NavController',['$scope', 'monitorsService',function($scope, monitorsService){
+    $scope.monitorList = monitorsService.monitorList;
 }]);
