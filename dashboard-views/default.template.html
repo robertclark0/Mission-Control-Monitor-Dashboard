@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row text-center" style="margin-top: 6em;">
+        <div id="col-home" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+            <h2>Mission Control</h2>
+            <h2>Monitor Dashboard</h2>
+            <div ng-controller="MonitorsController">
+                <h1>
+                    <a class="btn btn-default" ng-click="open('lg')">Add Monitors to Dashboard</a>
+                </h1>
+            </div>
+            <div class="row text-left" style="margin-top: 3em; margin-bottom: 3em;">
+                <div class="col-md-10 col-md-offset-1 about">
+                    <tabset justified="true">
+                        <tab heading="How it works">
+                            <h3 class="about-header-sm">Visualize Data</h3>
+                            <p>MCMD provides a simple platform to visualize mission critical data. Built on AngularJS and designed to scale.</p>
+
+                            <h3 class="about-header-sm">Get Started</h3>
+                            Click 'Add Monitors to Dashboard' above or click 'Monitors' on the bottom of the navigation bar.
+                            The Monitors window provides a list of available monitors that can be added to the dashboard.
+                            Add multiple monitors of the same type by giving them distinct names. Click 'Loop' to continuously loop through the monitor list.</p>
+                        </tab>
+                        <tab heading="What can I see">
+                            <h3 class="about-header-sm">Demo Monitors</h3>
+                            <table class="table table-striped">
+                                <tr>
+                                    <td class="col-md-5">Area Weather</td>
+                                    <td>This is the weather monitor app.This is the weather monitor app.This is the weather monitor app.This is the weather monitor app</td>
+                                </tr>
+                                <tr>
+                                    <td>Air Traffic</td>
+                                    <td>This is the weather monitor app.This is the weather monitor app.This is the weather monitor app.This is the weather monitor app</td>
+                                </tr>
+                                <tr>
+                                    <td>MAAS Mars Atmospheric Data</td>
+                                    <td>This is the weather monitor app.This is the weather monitor app.This is the weather monitor app.This is the weather monitor app</td>
+                                </tr>
+                            </table>
+                        </tab>
+                        <tab heading="Open Source">
+                            <h3 class="about-header-sm">Customize and Share</h3>
+                            <p>MCMD was designed to accommodate any type of data or API. Custom dashboards have three components:
+                                the data source, the widget functionality and the dashboard view. The modular widget design even allows for sharing widgets between dashboards.</p>
+                            <p>This is a project of <a href="http://robertclark.io">Robert Clark</a>. API documents coming soon.</p>
+                        </tab>
+                    </tabset>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

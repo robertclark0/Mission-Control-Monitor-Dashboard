@@ -6,3 +6,23 @@
 .well a{
     color:white;
 }
+
+#col-home{
+    border: dashed 5px #4f6474;
+    border-radius: 2em;
+
+}
+.about table{
+    font-size:1em;
+}
+
+.about a{
+    color:white;
+}
+
+.about-header-sm{
+    font-size:1.3em;
+    margin-top:1em;
+    margin-bottom:1em;
+
+}
