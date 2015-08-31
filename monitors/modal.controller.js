@@ -4,11 +4,10 @@ mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'currentMonit
     $scope.availableMonitorList = availableMonitorsService.monitorList;
 
     $scope.newMonitorName = '';
+    $scope.newMonitorObject = {};
 
     $scope.addMonitor = function(){
-        $scope.currentMonitorList.push({
-            title: $scope.newMonitorName
-        });
+        $scope.currentMonitorList.push($scope.newMonitorObject);
         //currentMonitorsService.monitorList = $scope.currentMonitorList;
     };
 
@@ -20,12 +19,23 @@ mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'currentMonit
         rowHeight: 35,
         enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
         enableColumnMenus: false,
-        multiSelect: true,
+        multiSelect: false,
         columnDefs: [
             { name: 'title', displayName: 'Available Monitors', enableSorting: false}
         ],
         data: $scope.availableMonitorList
     };
+    $scope.gridAvailableMonitors.onRegisterApi = function(gridApi){
+        //set gridApi on scope
+        $scope.gridApi = gridApi;
+        gridApi.selection.on.rowSelectionChanged($scope,function(row){
+            if (row.isSelected === true){
+                $scope.newMonitorObject = gridApi.selection.getSelectedRows()[0];
+                $scope.newMonitorName = $scope.newMonitorObject.title;
+            }
+        })
+    };
+
 
     //Current Monitors Grid
     $scope.gridCurrentMonitors = {

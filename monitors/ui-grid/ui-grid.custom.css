@@ -951,8 +951,11 @@ fieldset[disabled] .ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button.
     }
 }
 
-.ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+#gridAvailableMonitors .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
     background-color: #5cb85c !important;
+}
+#gridCurrentMonitors .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+    background-color: #d9534f !important;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:last-child {
     border-right-color: #4E5D6C !important;
