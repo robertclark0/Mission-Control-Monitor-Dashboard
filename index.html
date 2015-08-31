@@ -39,7 +39,7 @@
                 </div>
                 <div id="monitor-list" ng-controller="NavController">
                     <div class="list-group">
-                        <a href="#" class="list-group-item" ng-repeat="monitor in monitorList">
+                        <a href="#" class="list-group-item" ng-repeat="monitor in monitorList track by $index">
                             {{monitor.title}}
                         </a>
                     </div>
