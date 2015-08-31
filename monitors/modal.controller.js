@@ -1,4 +1,4 @@
-mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'currentMonitorsService','uiGridConstants', 'availableMonitorsService', function ($scope, $modalInstance, currentMonitorsService, uiGridConstants, availableMonitorsService) {
+mcmdApp.controller('ModalController', ['$scope', '$filter', '$modalInstance', 'currentMonitorsService','uiGridConstants', 'availableMonitorsService', function ($scope, $filter, $modalInstance, currentMonitorsService, uiGridConstants, availableMonitorsService) {
 
     $scope.currentMonitorList = currentMonitorsService.monitorList;
     $scope.availableMonitorList = availableMonitorsService.monitorList;
@@ -8,8 +8,19 @@ mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'currentMonit
     $scope.addMonitor = function(){
         $scope.newMonitorObject.title = $scope.newMonitorName;
         $scope.currentMonitorList.push(angular.copy($scope.newMonitorObject));
-        //currentMonitorsService.monitorList = $scope.currentMonitorList;
-        console.log($scope.currentMonitorList);
+        //console.log($scope.currentMonitorList);
+
+    };
+
+    $scope.removeMonitors = function(){
+        angular.forEach($scope.selectedRows, function(value){
+            //console.log(value.entity.$$hashKey);
+            var i = $scope.currentMonitorList.map(function(e) { return e.$$hashKey; }).indexOf(value.entity.$$hashKey);
+            if (i > -1) {
+                $scope.currentMonitorList.splice(i, 1);
+            }
+        });
+
 
     };
 
@@ -32,7 +43,6 @@ mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'currentMonit
         $scope.gridApi = gridApi;
         gridApi.selection.on.rowSelectionChanged($scope,function(row){
             if (row.isSelected === true){
-
                 $scope.newMonitorObject = angular.copy(gridApi.selection.getSelectedRows()[0]);
                 $scope.newMonitorName = $scope.newMonitorObject.title;
             }
@@ -57,7 +67,8 @@ mcmdApp.controller('ModalController', ['$scope', '$modalInstance', 'currentMonit
         //set gridApi on scope
         $scope.gridApi = gridApi;
         gridApi.selection.on.rowSelectionChanged($scope,function(){
-            console.log(gridApi.selection.getSelectedGridRows());
+            $scope.selectedRows = gridApi.selection.getSelectedGridRows();
+            //console.log($scope.selectedRows[0].entity.$$hashKey);
         })
     };
 

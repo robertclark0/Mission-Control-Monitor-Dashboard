@@ -1,4 +1,4 @@
-mcmdApp.service('availableMonitorsService', function(){
+mcmdApp.service('availableMonitorsService', [function(){
     this.monitorList = [
         {
             title: "Area Weather",
@@ -31,4 +31,6 @@ mcmdApp.service('availableMonitorsService', function(){
             lat: "35"
         }
     ];
-});
+
+
+}]);
