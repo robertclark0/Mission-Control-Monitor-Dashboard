@@ -27,7 +27,7 @@ mcmdApp.controller('ModalController', ['$scope', '$filter', '$modalInstance', 'c
     //Available Monitors Grid
     $scope.gridAvailableMonitors = {
         enableRowSelection: true,
-        enableSelectAll: true,
+        enableSelectAll: false,
         selectionRowHeaderWidth: 35,
         rowHeight: 35,
         enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
@@ -53,7 +53,7 @@ mcmdApp.controller('ModalController', ['$scope', '$filter', '$modalInstance', 'c
     //Current Monitors Grid
     $scope.gridCurrentMonitors = {
         enableRowSelection: true,
-        enableSelectAll: true,
+        enableSelectAll: false,
         selectionRowHeaderWidth: 35,
         rowHeight: 35,
         enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
