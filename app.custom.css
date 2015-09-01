@@ -1,3 +1,11 @@
+@font-face {font-family: 'PirulenRg-Regular';
+    src: url('media/2F0E49_0_0.eot');
+    src: url('media/2F0E49_0_0.eot?#iefix') format('embedded-opentype'),
+    url('media/2F0E49_0_0.woff2') format('woff2'),
+    url('media/2F0E49_0_0.woff') format('woff'),
+    url('media/2F0E49_0_0.ttf') format('truetype'),
+    url('media/2F0E49_0_0.svg#wf') format('svg');}
+
 .well {
     margin: 10px 10px 10px 10px;
     padding: 10px 24px 10px 24px;
@@ -24,6 +32,14 @@
     font-size:1.3em;
     margin-top:1em;
     margin-bottom:1em;
+}
+.about-title{
+    padding:30px 0px 15px 0px;
+}
+.about-title h2{
+    font-family: PirulenRg-Regular;
+    font-size:1.5em;
+    margin:5px;
 }
 
 .nav-pills li a:hover{
