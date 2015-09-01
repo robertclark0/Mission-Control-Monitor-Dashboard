@@ -1,9 +1,7 @@
-mcmdApp.controller('SatelliteImageController',['$scope', '$resource', 'areaWeatherService',function($scope, $resource, areaWeatherService){
+mcmdApp.controller('SatelliteImageController',['$scope', 'areaWeatherService',function($scope, areaWeatherService){
 
     $scope.title = "images!";
 
-    $scope.imageResult = areaWeatherService.imageResult;
+    $scope.weatherResult = areaWeatherService.weatherResult;
 
 }]);
-
-
