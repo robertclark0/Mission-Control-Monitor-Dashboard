@@ -1,5 +1,6 @@
-mcmdApp.directive('weatherMapWidget', function(){
+mcmdApp.directive('weatherMapDirective', function(){
     return {
-        template: "<h3>Weather Widget</h3>"
+        templateUrl: "widgets/weather-map/weather-map.template.html",
+        replace: true
     }
 });
