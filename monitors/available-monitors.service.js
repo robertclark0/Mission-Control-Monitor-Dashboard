@@ -2,6 +2,7 @@ mcmdApp.service('availableMonitorsService', [function(){
     this.monitorList = [
         {
             title: "Area Weather",
+            controlValue: "area-weather",
             type: "Weather",
             lon: "25",
             lat: "35"
@@ -26,6 +27,7 @@ mcmdApp.service('availableMonitorsService', [function(){
         },
         {
             title: "Area Air Traffic",
+            controlValue: "air-traffic",
             type: "Weather",
             lon: "25",
             lat: "35"

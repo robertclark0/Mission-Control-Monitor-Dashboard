@@ -54,7 +54,7 @@
 }
 
 #monitor-list-settings{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding: 0 0 10px 20px;
 }
