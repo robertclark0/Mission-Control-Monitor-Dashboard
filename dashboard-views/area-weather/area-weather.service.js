@@ -1,6 +1,7 @@
-mcmdApp.service('areaWeatherService', [function(){
+mcmdApp.service('areaWeatherService', ['$resource', function($resource){
 
-    this.firstName = "Robertz";
-    this.lastName = "Clarkz";
+    this.imageAPI = $resource("http://api.openweathermap.org/data/2.5/weather", {get: {method: "JSONP"}});
+    this.imageResult = this.imageAPI.get({q: "London,uk"});
+    //console.log($scope.imageResult);
 
 }]);
