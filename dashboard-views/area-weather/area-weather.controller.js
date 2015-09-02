@@ -1,6 +1,5 @@
-mcmdApp.controller('AreaWeatherController', ['$scope', 'areaWeatherService', function($scope, mainService){
+mcmdApp.controller('AreaWeatherController', ['$scope', function($scope){
 
-    $scope.name = mainService.firstName;
-    $scope.lastName = mainService.lastName;
+
 
 }]);
