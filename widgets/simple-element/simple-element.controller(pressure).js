@@ -1,4 +1,4 @@
-mcmdApp.controller('SingleElementController(Pressure)',['$scope', '$filter', 'areaWeatherService',function($scope,$filter, areaWeatherService){
+mcmdApp.controller('SimpleElementController(Pressure)',['$scope', '$filter', 'areaWeatherService',function($scope,$filter, areaWeatherService){
 
     $scope.weatherResult = areaWeatherService.weatherResult.$promise.then(function(resp){
         $scope.weatherResult = resp;
