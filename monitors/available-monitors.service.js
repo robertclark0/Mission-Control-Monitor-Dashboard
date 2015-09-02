@@ -1,6 +1,13 @@
 mcmdApp.service('availableMonitorsService', [function(){
     this.monitorList = [
         {
+            title: "Demo Panels",
+            controlValue: "demo-panels",
+            type: "Weather",
+            lon: "25",
+            lat: "35"
+        },
+        {
             title: "Area Weather",
             controlValue: "area-weather",
             type: "Weather",
@@ -24,14 +31,8 @@ mcmdApp.service('availableMonitorsService', [function(){
             type: "Traffic",
             lon: "25",
             lat: "24"
-        },
-        {
-            title: "Area Air Traffic",
-            controlValue: "air-traffic",
-            type: "Weather",
-            lon: "25",
-            lat: "35"
         }
+
     ];
 
 
