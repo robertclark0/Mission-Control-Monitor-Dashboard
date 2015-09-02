@@ -1,5 +1,10 @@
 mcmdApp.controller('FeedDataController', ['$scope', 'areaWeatherService',function($scope, areaWeatherService){
 
-    $scope.name = "Clark";
+    $scope.weatherResult = areaWeatherService.weatherResult.$promise.then(function(resp){
+        $scope.weatherResult = resp;
+
+        $scope.value = $scope.weatherResult;
+    });
+
 
 }]);

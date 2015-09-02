@@ -3,6 +3,7 @@ mcmdApp.directive('feedDataDirective', function(){
         templateUrl: "widgets/feed-data/feed-data.template.html",
         replace: true,
         controller : "@",
-        name:"controllerName"
+        name:"controllerName",
+        scope: {}
     }
 });

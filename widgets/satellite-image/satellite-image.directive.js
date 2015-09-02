@@ -3,6 +3,7 @@ mcmdApp.directive('satelliteImageDirective', function(){
         templateUrl: "widgets/satellite-image/satellite-image.template.html",
         replace: true,
         controller : "@",
-        name:"controllerName"
+        name:"controllerName",
+        scope: {}
     }
 });
