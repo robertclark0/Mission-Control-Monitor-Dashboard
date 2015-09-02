@@ -2,57 +2,78 @@
 <html lang="en" ng-app="mcmdApp">
     <head>
 
-        <!--APPLICATION SETUP-->
+
+        <!--
+        ****
+        **** APPLICATION SETUP
+        ****
+        **** The references contained here are for setting up the application, and not creating custom dashboard views.
+        -->
+
         <!--AngularJS-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-resource.min.js"></script>
+
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css" />
+
         <!--Angular UI Bootstrap-->
         <script src="angular-ui-bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
+
         <!--Application-->
         <script src="app-mcmd.module.js"></script>
         <script src="app-mcmd.config.js"></script>
+
         <!--Nav bar-->
         <script src="navigation/nav.controller.js"></script>
         <script src="navigation/nav.directive.js"></script>
         <link rel="stylesheet" href="navigation/nav.css" />
+
         <!--Monitors Modals-->
         <script src="monitors/monitors.controller.js"></script>
         <script src="monitors/modal.controller.js"></script>
         <script src="monitors/current-monitors.service.js"></script>
         <script src="monitors/available-monitors.service.js"></script>
+
         <!--UI Grid-->
         <script src="monitors/ui-grid/ui-grid.js"></script>
         <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
         <!--<link rel="stylesheet" href="monitors/ui-grid/ui-grid.css" type="text/css"/>-->
         <link rel="stylesheet" href="monitors/ui-grid/ui-grid.custom.css" />
+
         <!--App Level Custom CSS-->
         <link rel="stylesheet" href="app.custom.css"/>
 
-        <!--DASHBOARD VIEWS-->
-        <link rel="stylesheet" href="dashboard-views/air-traffic/air-traffic.css" />
-        <script src="dashboard-views/air-traffic/air-traffic.controller.js"></script>
-
-        <script src="dashboard-views/area-weather/area-weather.service.js"></script>
-        <script src="dashboard-views/area-weather/area-weather.controller.js"></script>
         <!--WIDGETS-->
-
-        <script src="widgets/feed-data/feed-data.controller.js"></script>
+        <!--Feed Data-->
         <script src="widgets/feed-data/feed-data.directive.js"></script>
-
-
-        <script src="dashboard-views/area-weather/widget-instances/simple-element.pressure.controller.js"></script>
-        <script src="dashboard-views/area-weather/widget-instances/simple-element.wind.controller.js"></script>
+        <!--Simple Element-->
         <script src="widgets/simple-element/simple-element.directive.js"></script>
         <link rel="stylesheet" href="widgets/simple-element/simple-element.css" />
 
 
-        <script src="widgets/satellite-image/satellite-image.controller.js"></script>
-        <script src="widgets/satellite-image/satellite-image.directive.js"></script>
+        <!--
+        ****
+        **** CUSTOM DASHBOARD VIEWS
+        ****
+        **** The references contained here are for building custom dashboard views, including widget instance references.
+        -->
+
+        <!--Air Traffic Dashboard-->
+        <script src="dashboard-views/air-traffic/air-traffic.controller.js"></script>
+        <link rel="stylesheet" href="dashboard-views/air-traffic/air-traffic.css" />
+
+        <!--Area Weather Dashboard-->
+        <script src="dashboard-views/area-weather/area-weather.controller.js"></script>
+        <script src="dashboard-views/area-weather/area-weather.service.js"></script>
+        <!--Widget Instances-->
+        <script src="dashboard-views/area-weather/widget-instances/simple-element.pressure.controller.js"></script>
+        <script src="dashboard-views/area-weather/widget-instances/simple-element.wind.controller.js"></script>
+        <script src="dashboard-views/area-weather/widget-instances/feed-data.weather.controller.js"></script>
+
 
     </head>
     <body>
