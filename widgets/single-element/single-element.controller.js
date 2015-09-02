@@ -1,7 +1,6 @@
-mcmdApp.controller('SingleElementController',['$scope', 'areaWeatherService',function($scope, mainService){
+mcmdApp.controller('SingleElementController',['$scope', 'areaWeatherService',function($scope, areaWeatherService){
 
-    $scope.weatherResult = mainService.weatherResult;
-    console.log($scope.weatherResult);
+
 
 }]);
 
