@@ -1,5 +1,1 @@
-mcmdApp.controller('AreaWeatherController', ['$scope', function($scope){
-
-
-
-}]);
+mcmdApp.controller('AreaWeatherController', ['$scope', function($scope){}]);
