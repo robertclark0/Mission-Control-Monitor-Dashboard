@@ -60,6 +60,12 @@
     padding: 0 0 20px 20px;
 }
 
+.currentMonitor{
+    background-color: #2b3e50 !important;
+}
+.currentMonitor-1{
+    border-bottom-color: #4e5d6c !important;
+}
 
 
 @media(min-width:768px) {
