@@ -67,6 +67,22 @@
     border-bottom-color: #4e5d6c !important;
 }
 
+.nav-pills li a:hover{
+    background-color: #465263 !important;
+}
+.nav-pills li{
+    border-bottom: solid #3e4e62 1px;
+}
+#main-nav a{
+    font-family: PirulenRg-Regular;
+    font-size: 0.9em;
+}
+#monitor-list{
+    margin-top: 30px;
+    margin-bottom:75px;
+    overflow:hidden;
+}
+
 
 @media(min-width:768px) {
     #wrapper {

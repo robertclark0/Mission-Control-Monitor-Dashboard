@@ -65,7 +65,7 @@ mcmdApp.controller('ModalController', ['$scope', '$filter', '$modalInstance', 'c
         multiSelect: true,
         data: $scope.currentMonitorList,
         columnDefs: [
-        { name: 'title', displayName: 'Current Monitors', enableSorting: false}
+        { name: 'title', displayName: 'Current Dashboard', enableSorting: false}
     ]};
     $scope.gridCurrentMonitors.onRegisterApi = function(gridApi){
         //set gridApi on scope

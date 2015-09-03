@@ -42,21 +42,7 @@
     margin:5px;
 }
 
-.nav-pills li a:hover{
-    background-color: #2b3e50 !important;
-}
-.nav-pills li{
-    border-bottom: solid #3e4e62 1px;
-}
-#main-nav a{
-    font-family: PirulenRg-Regular;
-    font-size: 0.9em;
-}
-#monitor-list{
-    margin-top: 30px;
-    margin-bottom:75px;
-    overflow:hidden;
-}
+
 
 .panel{
     margin-bottom: 20px !important;
@@ -79,8 +65,4 @@
     height:564px;
 }
 
-.map {
-    height: 400px;
-    width: 100%;
-}
 
