@@ -1,10 +1,10 @@
 mcmdApp.controller('SimpleElementWindController',['$scope', 'areaWeatherService',function($scope, areaWeatherService){
 
-    $scope.weatherResult = areaWeatherService.weatherResult.$promise.then(function(resp){
-        $scope.weatherResult = resp;
+    var weatherResult = areaWeatherService.weatherResult.$promise.then(function(resp){
+        weatherResult = resp;
 
-        $scope.value = $scope.weatherResult.wind.speed + " mph";
-        $scope.subValue = $scope.weatherResult.wind.deg + " deg";
+        $scope.value = weatherResult.wind.speed + " mph";
+        $scope.subValue = weatherResult.wind.deg + " deg";
 
     });
 
