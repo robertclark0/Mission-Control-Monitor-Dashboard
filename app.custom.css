@@ -64,5 +64,8 @@
 .panel-8{
     height:564px;
 }
+.panel-full{
+    padding:0 !important;
+}
 
 

@@ -4,8 +4,8 @@ mcmdApp.controller('WeatherMapPressureController',['$scope', 'areaWeatherService
     $scope.startPressureMap = function(){
         //Reference Map Directive
         //Center of map
-        var lat = 29.650374;
-        var lon = -98.465688;
+        var lat = areaWeatherService.latitutde;
+        var lon = areaWeatherService.longitude;
 
 
         var wgs84 = new OpenLayers.Projection("EPSG:4326");
