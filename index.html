@@ -41,7 +41,7 @@
         <!--UI Grid-->
         <script src="monitors/ui-grid/ui-grid.js"></script>
         <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
-        <!--<link rel="stylesheet" href="monitors/ui-grid/ui-grid.css" type="text/css"/>-->
+        <link rel="stylesheet" href="monitors/ui-grid/ui-grid.css" type="text/css"/><!---->
         <link rel="stylesheet" href="monitors/ui-grid/ui-grid.custom.css" />
 
         <!--App Level Custom CSS-->
@@ -91,8 +91,8 @@
                 <div id="monitor-list" ng-controller="NavController">
 
                     <ul id="main-nav" class="nav nav-pills nav-stacked">
-                        <li role="presentation" ng-repeat="monitor in monitorList track by $index">
-                            <a href="#/dashboard-view/{{monitor.controlValue}}">{{monitor.title}}</a>
+                        <li role="presentation" ng-repeat="monitor in monitorList track by $index" ng-class="{'currentMonitor-1' : checkValue - 1 == $index}">
+                            <a ng-model="checkValue" ng-click="checkIndex($index)" ng-class="{'currentMonitor' : checkValue == $index}" href="#/dashboard-view/{{monitor.controlValue}}">{{monitor.title}}</a>
                         </li>
                     </ul>
                 </div>
