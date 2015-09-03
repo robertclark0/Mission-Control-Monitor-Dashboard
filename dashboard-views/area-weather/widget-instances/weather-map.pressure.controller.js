@@ -12,13 +12,11 @@ mcmdApp.controller('WeatherMapPressureController',['$scope', 'areaWeatherService
         var mercator = new OpenLayers.Projection("EPSG:900913");
 
         var lonlat = new OpenLayers.LonLat(lon, lat).transform(wgs84, mercator);
-        var map = new OpenLayers.Map("basicMap");
-        console.log(map);
-        console.log("hello");
+        var map = new OpenLayers.Map("pressureMap");
         // Create overlays
         //  OSM
         var mapnik = new OpenLayers.Layer.OSM();
-        var layer_cloud = new OpenLayers.Layer.XYZ(
+        var layer_pressure = new OpenLayers.Layer.XYZ(
             "pressure",
             "http://${s}.tile.openweathermap.org/map/pressure/${z}/${x}/${y}.png",
             {
@@ -29,7 +27,7 @@ mcmdApp.controller('WeatherMapPressureController',['$scope', 'areaWeatherService
             }
         );
 
-        var layer_precipitation = new OpenLayers.Layer.XYZ(
+        var layer_pressure_cntr = new OpenLayers.Layer.XYZ(
             "pressure_cntr",
             "http://${s}.tile.openweathermap.org/map/pressure_cntr/${z}/${x}/${y}.png",
             {
@@ -39,7 +37,7 @@ mcmdApp.controller('WeatherMapPressureController',['$scope', 'areaWeatherService
             }
         );
 
-        map.addLayers([mapnik, layer_cloud, layer_precipitation]);
+        map.addLayers([mapnik, layer_pressure, layer_pressure_cntr]);
         map.setCenter( lonlat, 6);
 
     }
