@@ -1,22 +1,18 @@
 mcmdApp.service('currentMonitorsService', function(){
     this.monitorList = [
         {
-            title: "LP40 Weather",
+            title: "Demo Panels",
+            controlValue: "demo-panels",
             type: "Weather",
             lon: "25",
             lat: "35"
         },
         {
-            title: "LP39 Weather",
+            title: "Weather San Antonio",
+            controlValue: "area-weather",
             type: "Weather",
-            lon: "24",
-            lat: "34"
-        },
-        {
-            title: "SpaceX Headquarters",
-            type: "Weather",
-            lon: "80",
-            lat: "29"
-        },
+            lon: "25",
+            lat: "35"
+        }
     ];
 });
