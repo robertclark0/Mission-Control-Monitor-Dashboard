@@ -6,5 +6,4 @@ mcmdApp.controller('FeedDataWeatherController', ['$scope', 'areaWeatherService',
         $scope.value = $scope.weatherResult;
     });
 
-
 }]);
