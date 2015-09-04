@@ -1,0 +1,25 @@
+<div class="modal-header">
+    <h4 class="modal-title">Area Weather Settings</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Find Location</h4>
+
+            <form ng-submit="startSearch()">
+                <div class="input-group">
+                    <input type="text" class="form-control" ng-model="locationSearch" required>
+                    <span class="input-group-btn">
+                      <button class="btn btn-success" type="submit" >Search</button>
+                    </span>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" type="button" ng-click="ok()">Close</button>
+</div>

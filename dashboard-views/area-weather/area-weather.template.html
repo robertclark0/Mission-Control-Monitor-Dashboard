@@ -2,13 +2,13 @@
         <nav class="navbar navbar-dark">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Weather San Antonio</a>
+                    <a class="navbar-brand" >Weather San Antonio</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#/" class="btn btn-primary">Settings</a></li>
+                        <li><a ng-click="open('md')" class="btn btn-primary">Settings</a></li>
                     </ul>
                 </div>
             </div>
@@ -16,7 +16,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
-                <div class="panel panel-primary panel-8">
+                <div class="panel panel-success panel-8">
                     <div class="panel-heading">
                         <h3 class="panel-title">Pressure Map</h3>
                     </div>
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-primary panel-8">
+                <div class="panel panel-success panel-8">
                     <div class="panel-heading">
                         <h3 class="panel-title">Wind Map</h3>
                     </div>
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-primary panel-2">
+                <div class="panel panel-success panel-2">
                     <div class="panel-heading">
                         <h3 class="panel-title">Panel primary</h3>
                     </div>
@@ -44,7 +44,7 @@
                         Panel content
                     </div>
                 </div>
-                <div class="panel panel-primary panel-6">
+                <div class="panel panel-success panel-6">
                     <div class="panel-heading">
                         <h3 class="panel-title">Latest Landsat 8 Image</h3>
                     </div>
@@ -56,7 +56,7 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <div class="panel panel-primary panel-4">
+                <div class="panel panel-success panel-4">
                     <div class="panel-heading">
                         <h3 class="panel-title">Data Feed</h3>
                     </div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="panel panel-primary panel-2">
+                <div class="panel panel-success panel-2">
                     <div class="panel-heading">
                         <h3 class="panel-title">Wind Speed</h3>
                     </div>
@@ -74,7 +74,7 @@
                         <simple-element-directive controller-name="SimpleElementWindController"></simple-element-directive>
                     </div>
                 </div>
-                <div class="panel panel-primary panel-2">
+                <div class="panel panel-success panel-2">
                     <div class="panel-heading">
                         <h3 class="panel-title">Atmospheric Pressure</h3>
                     </div>
@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="panel panel-primary panel-2">
+                <div class="panel panel-success panel-2">
                     <div class="panel-heading">
                         <h3 class="panel-title">Cloud Cover</h3>
                     </div>
@@ -92,7 +92,7 @@
                         <simple-progress-bar-directive controller-name="SimpleProgressBarCloudsController"></simple-progress-bar-directive>
                     </div>
                 </div>
-                <div class="panel panel-primary panel-2">
+                <div class="panel panel-success panel-2">
                     <div class="panel-heading">
                         <h3 class="panel-title">Air Temperature</h3>
                     </div>
