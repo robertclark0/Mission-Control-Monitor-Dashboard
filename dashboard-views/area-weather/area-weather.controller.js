@@ -7,7 +7,7 @@ mcmdApp.controller('AreaWeatherController', ['$scope', '$modal', function($scope
         var modalInstance = $modal.open({
             animation: $scope.animationsEnabled,
             templateUrl: 'dashboard-views/area-weather/settings-modal/area-weather-settings-modal.template.html',
-            controller: 'ModalController',
+            controller: 'AreaWeatherSettingsModalController',
             size: size,
             resolve: {
                 items: function () {

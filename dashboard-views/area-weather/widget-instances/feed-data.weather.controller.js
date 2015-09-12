@@ -2,7 +2,7 @@ mcmdApp.controller('FeedDataWeatherController', ['$scope', 'areaWeatherService',
 
     $scope.weatherResult = areaWeatherService.weatherResult.$promise.then(function(resp){
         $scope.weatherResult = resp;
-
+        console.log(resp);
         $scope.value = $scope.weatherResult;
     });
 

@@ -3,16 +3,17 @@ mcmdApp.service('currentMonitorsService', function(){
         {
             title: "Demo Panels",
             controlValue: "demo-panels",
-            type: "Weather",
-            lon: "25",
-            lat: "35"
+            type: "Weather"
         },
         {
-            title: "Weather San Antonio",
+            title: "SpaceX Hawthorne",
             controlValue: "area-weather",
-            type: "Weather",
-            lon: "25",
-            lat: "35"
+            type: "Weather"
+        },
+        {
+            title: "Mars Curiosity Data",
+            controlValue: "mars-data",
+            type: "Weather"
         }
     ];
 });
